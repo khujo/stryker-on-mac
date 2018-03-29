@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Find first parameter with value restriction on first parameter that restricts to an empty set should return the next parameter 1`] = `"Error finding jobs for parameter \\"Airbaganzahl\\" on concept \\"Auto\\". Current values \\"4,6,9\\" have no intersection with value restriction \\"10,11\\"!"`;
+
+exports[`First parameter should be terminal 1`] = `"Error finding jobs for parameter \\"Airbaganzahl\\" on concept \\"Auto\\". Current values \\"4,6,9\\" have no intersection with value restriction \\"10,11\\"!"`;

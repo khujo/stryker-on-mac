@@ -1,0 +1,23 @@
+{
+  "name": "configuration-iterator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest",
+    "stryker-init": "stryker init",
+    "mutate": "stryker run"
+  },
+  "author": "Felix Rosenheinrich <felix@dsi08.de>",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^22.4.3",
+    "stryker": "^0.20.1",
+    "stryker-api": "^0.14.0",
+    "stryker-html-reporter": "^0.12.4",
+    "stryker-javascript-mutator": "^0.4.3",
+    "stryker-jest-runner": "^0.5.1"
+  },
+  "jest": {}
+}

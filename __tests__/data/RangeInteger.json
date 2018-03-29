@@ -1,0 +1,148 @@
+[
+  {
+    "name": "RANGE_INTEGER with single value in between",
+    "config": "[0;3]",
+    "job": "2",
+    "expected": ["2"]
+  },{
+    "name": "RANGE_INTEGER with single value from lower bound",
+    "config": "[0;3]",
+    "job": "0",
+    "expected": ["0"]
+  },{
+    "name": "RANGE_INTEGER with single value from upper bound",
+    "config": "[0;3]",
+    "job": "3",
+    "expected": ["3"]
+  },{
+    "name": "RANGE_INTEGER with single value out of range",
+    "config": "[0;3]",
+    "job": "4",
+    "expected": []
+  },{
+    "name": "negative RANGE_INTEGER with single value",
+    "config": "[-2;2]",
+    "job": "1",
+    "expected": ["1"]
+  },{
+    "name": "negative RANGE_INTEGER with single negative value",
+    "config": "[-2;2]",
+    "job": "-1",
+    "expected": ["-1"]
+  },{
+    "name": "negative RANGE_INTEGER with zero",
+    "config": "[-2;2]",
+    "job": "0",
+    "expected": ["0"]
+  },{
+    "name": "RANGE_INTEGER containing RANGE_INTEGER to upper bound",
+    "config": "[0;3]",
+    "job": "[1;3]",
+    "expected": ["1", "2", "3"]
+  },{
+    "name": "RANGE_INTEGER containing RANGE_INTEGER to lower bound",
+    "config": "[0;3]",
+    "job": "[0;2]",
+    "expected": ["0", "1", "2"]
+  },{
+    "name": "RANGE_INTEGER containing RANGE_INTEGER in between",
+    "config": "[0;3]",
+    "job": "[1;2]",
+    "expected": ["1", "2"]
+  },{
+    "name": "RANGE_INTEGER included in RANGE_INTEGER in between",
+    "config": "[1;4]",
+    "job": "[0;5]",
+    "expected": ["1", "2", "3", "4"]
+  },{
+    "name": "RANGE_INTEGER included in RANGE_INTEGER to lower bound",
+    "config": "[0;4]",
+    "job": "[0;5]",
+    "expected": ["0", "1", "2", "3", "4"]
+  },{
+    "name": "RANGE_INTEGER included in RANGE_INTEGER to upper bound",
+    "config": "[2;5]",
+    "job": "[0;5]",
+    "expected": ["2", "3", "4", "5"]
+  },{
+    "name": "RANGE_INTEGER crossing with RANGE_INTEGER on lower bound",
+    "config": "[0;3]",
+    "job": "[-2;2]",
+    "expected": ["0", "1", "2"]
+  },{
+    "name": "RANGE_INTEGER crossing with RANGE_INTEGER on upper bound",
+    "config": "[0;3]",
+    "job": "[2;4]",
+    "expected": ["2", "3"]
+  },{
+    "name": "RANGE_INTEGER disjunct from RANGE_INTEGER",
+    "config": "[0;3]",
+    "job": "[4;5]",
+    "expected": []
+  },{
+    "name": "negativ RANGE_INTEGER crossing with RANGE_INTEGER on upper bound",
+    "config": "[-4;-1]",
+    "job": "[-2;2]",
+    "expected": ["-2", "-1"]
+  },{
+    "name": "RANGE_INTEGER crossing with RANGE_DOUBLE on upper bound",
+    "config": "[1;4]",
+    "job": "[1.5;4.5]",
+    "expected": ["2", "3", "4"]
+  },{
+    "name": "RANGE_INTEGER crossing with RANGE_DOUBLE on lower bound",
+    "config": "[1;4]",
+    "job": "[0.5;3.5]",
+    "expected": ["1", "2", "3"]
+  },{
+    "name": "RANGE_INTEGER included in RANGE_DOUBLE",
+    "config": "[1;4]",
+    "job": "[0.5;4.5]",
+    "expected": ["1", "2", "3", "4"]
+  },{
+    "name": "RANGE_INTEGER containing RANGE_DOUBLE",
+    "config": "[1;4]",
+    "job": "[1.5;3.5]",
+    "expected": ["2", "3"]
+  },{
+    "name": "RANGE_INTEGER with no intersection with RANGE_DOUBLE",
+    "config": "[1;4]",
+    "job": "[4.5;6.5]",
+    "expected": []
+  },{
+    "name": "negative RANGE_INTEGER containing RANGE_DOUBLE",
+    "config": "[-2;2]",
+    "job": "[-1.5;1.5]",
+    "expected": ["0", "-1", "1"]
+  },{
+    "name": "RANGE_INTEGER containing set",
+    "config": "[1;4]",
+    "job": ["2", "3"],
+    "expected": ["2", "3"]
+  },{
+    "name": "RANGE_INTEGER containing set lower bound",
+    "config": "[1;4]",
+    "job": ["1", "2"],
+    "expected": ["1", "2"]
+  },{
+    "name": "RANGE_INTEGER containing set upper bound",
+    "config": "[1;4]",
+    "job": ["3", "4"],
+    "expected": ["3", "4"]
+  },{
+    "name": "RANGE_INTEGER crossing set",
+    "config": "[1;4]",
+    "job": ["3", "4", "5"],
+    "expected": ["3", "4"]
+  },{
+    "name": "RANGE_INTEGER with no intersection to set",
+    "config": "[1;4]",
+    "job": ["5", "6"],
+    "expected": []
+  },{
+    "name": "negative RANGE_INTEGER containing set",
+    "config": "[-2;2]",
+    "job": ["-1", "0", "1"],
+    "expected": ["-1", "0", "1"]
+  }
+]

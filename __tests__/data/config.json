@@ -1,0 +1,19 @@
+{
+  "parameters": [
+    {
+      "name": "Artikelname",
+      "values": ["Banero", "Breeze"],
+      "concept": "Auto"
+    },
+    {
+      "name": "Artikelname",
+      "values": ["1.3 TDI", "1.4 Benzin", "1.6 Benzin"],
+      "concept": "Motor"
+    },
+    {
+      "name": "Airbaganzahl",
+      "values": ["6", "9", "12"],
+      "concept": "Auto"
+    }
+  ]
+}

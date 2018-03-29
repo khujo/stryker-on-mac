@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests with no value restriction RANGE_DOUBLE range double infinite bounds 1`] = `"Error finding jobs for parameter \\"TestParameter\\" on concept \\"TestConcept\\" with current values \\"[-infDouble;infDouble]\\"."`;
+
+exports[`tests with no value restriction RANGE_DOUBLE range double infinite lower bounds 1`] = `"Error finding jobs for parameter \\"TestParameter\\" on concept \\"TestConcept\\" with current values \\"[-infDouble;10]\\"."`;
+
+exports[`tests with no value restriction RANGE_DOUBLE range double infinite upper bounds 1`] = `"Error finding jobs for parameter \\"TestParameter\\" on concept \\"TestConcept\\" with current values \\"[10;infDouble]\\"."`;
+
+exports[`tests with no value restriction RANGE_INTEGER range integer infinite bounds 1`] = `"Error finding jobs for parameter \\"TestParameter\\" on concept \\"TestConcept\\" with current values \\"[-inf;inf]\\"."`;
+
+exports[`tests with no value restriction RANGE_INTEGER range integer infinite lower bounds 1`] = `"Error finding jobs for parameter \\"TestParameter\\" on concept \\"TestConcept\\" with current values \\"[-inf;10]\\"."`;
+
+exports[`tests with no value restriction RANGE_INTEGER range integer infinite upper bounds 1`] = `"Error finding jobs for parameter \\"TestParameter\\" on concept \\"TestConcept\\" with current values \\"[10;inf]\\"."`;

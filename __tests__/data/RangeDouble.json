@@ -1,0 +1,132 @@
+[{
+  "name": "RANGE_DOUBLE containing single value",
+  "config": "[1.5;4.5]",
+  "job": "2.5",
+  "expected": ["2.5"]
+},{
+  "name": "RANGE_DOUBLE containing single value lower bound",
+  "config": "[1.5;4.5]",
+  "job": "1.5",
+  "expected": ["1.5"]
+},{
+  "name": "RANGE_DOUBLE containing single value upper bound",
+  "config": "[1.5;4.5]",
+  "job": "4.5",
+  "expected": ["4.5"]
+},{
+  "name": "RANGE_DOUBLE with single value out of range",
+  "config": "[1.5;4.5]",
+  "job": "5.5",
+  "expected": []
+},{
+  "name": "negative RANGE_DOUBLE containing single value",
+  "config": "[-2.5;2.5]",
+  "job": "1.5",
+  "expected": ["1.5"]
+},{
+  "name": "negative RANGE_DOUBLE containing single negative value",
+  "config": "[-2.5;2.5]",
+  "job": "-1.5",
+  "expected": ["-1.5"]
+},{
+  "name": "negative RANGE_DOUBLE containing zero",
+  "config": "[-2.5;2.5]",
+  "job": "0",
+  "expected": ["0"]
+},{
+  "name": "RANGE_DOUBLE containing RANGE_DOUBLE",
+  "config": "[1.5;4.5]",
+  "job": "[2.75;3.25]",
+  "expected": ["2.75", "3.25"],
+  "stepSize": 0.5
+},{
+  "name": "RANGE_DOUBLE containing RANGE_DOUBLE lower bound",
+  "config": "[1.5;4.5]",
+  "job": "[1.5;2.25]",
+  "expected": ["1.5", "1.75", "2", "2.25"],
+  "stepSize": 0.25
+},{
+  "name": "RANGE_DOUBLE containing RANGE_DOUBLE upper bound",
+  "config": "[1.5;4.5]",
+  "job": "[3.75;4.5]",
+  "expected": ["3.75", "4", "4.25", "4.5"],
+  "stepSize": 0.25
+},{
+  "name": "RANGE_DOUBLE containing RANGE_DOUBLE upper bound with step size excluding upper bound",
+  "config": "[1.5;4.5]",
+  "job": "[3.75;4.5]",
+  "expected": ["3.75", "4.25", "4.5"],
+  "stepSize": 0.5
+},{
+  "name": "RANGE_DOUBLE crossing RANGE_DOUBLE lower bound",
+  "config": "[1.5;4.5]",
+  "job": "[0.5;2.5]",
+  "expected": ["1.5", "2", "2.5"],
+  "stepSize": 0.5
+},{
+  "name": "RANGE_DOUBLE crossing RANGE_DOUBLE upper bound",
+  "config": "[1.5;4.5]",
+  "job": "[3.5;5.5]",
+  "expected": ["3.5", "4", "4.5"],
+  "stepSize": 0.5
+},{
+  "name": "negativ RANGE_DOUBLE containing RANGE_DOUBLE with zero",
+  "config": "[-2.5;2.5]",
+  "job": "[-2.25;2.25]",
+  "expected": ["0", "-2.25", "-1.75", "-1.25", "-0.75", "-0.25", "0.25", "0.75", "1.25", "1.75", "2.25"],
+  "stepSize": 0.5
+},{
+  "name": "RANGE_DOUBLE containing RANGE_INTEGER",
+  "config": "[1.5;4.5]",
+  "job": "[2;4]",
+  "expected": ["2", "2.5", "3", "3.5", "4"],
+  "stepSize": 0.5
+},{
+  "name": "RANGE_DOUBLE crossing RANGE_INTEGER lower bound",
+  "config": "[1.5;4.5]",
+  "job": "[1;3]",
+  "expected": ["1.5", "2", "2.5", "3"],
+  "stepSize": 0.5
+},{
+  "name": "RANGE_DOUBLE crossing RANGE_INTEGER upper bound",
+  "config": "[1.5;4.5]",
+  "job": "[3;5]",
+  "expected": ["3", "3.5", "4", "4.5"],
+  "stepSize": 0.5
+},{
+  "name": "negativ RANGE_DOUBLE containing negative RANGE_INTEGER",
+  "config": "[-2.5;2.5]",
+  "job": "[-1;1]",
+  "expected": ["0", "-1", "-0.5", "0.5", "1"],
+  "stepSize": 0.5
+},{
+  "name": "RANGE_DOUBLE containing set",
+  "config": "[1.5;4.5]",
+  "job": ["1.75", "2", "2.3"],
+  "expected": ["1.75", "2", "2.3"]
+},{
+  "name": "RANGE_DOUBLE containing set upper bound",
+  "config": "[1.5;4.5]",
+  "job": ["3.75", "4.5"],
+  "expected": ["3.75", "4.5"]
+},{
+  "name": "RANGE_DOUBLE containing set lower bound",
+  "config": "[1.5;4.5]",
+  "job": ["1.5", "2.25"],
+  "expected": ["1.5", "2.25"]
+},{
+  "name": "RANGE_DOUBLE crossing set lower bound",
+  "config": "[1.5;4.5]",
+  "job": ["1", "2.25", "3"],
+  "expected": ["2.25", "3"]
+},{
+  "name": "RANGE_DOUBLE crossing set upper bound",
+  "config": "[1.5;4.5]",
+  "job": ["2.25", "3", "5"],
+  "expected": ["2.25", "3"]
+},{
+  "name": "negative RANGE_DOUBLE containing set",
+  "config": "[-2.5;2.5]",
+  "job": ["-1", "0", "1"],
+  "expected": ["-1", "0", "1"]
+}]
